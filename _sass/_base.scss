@@ -35,6 +35,7 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -203,4 +204,9 @@ pre {
             fill: $grey-color;
         }
     }
+
+}
+
+div {
+    font-family: 'Lato', sans-serif;
 }
