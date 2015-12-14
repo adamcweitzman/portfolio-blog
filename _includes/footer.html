@@ -1,37 +1,11 @@
 <footer class="site-footer">
+  <p class="text-center">{{ site.description }}</p>
 
-<!--   <div class="wrapper">
-    
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-4">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-4">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-4"> -->
-        <p class="text-center">{{ site.description }}</p>
-<!--       </div> -->
-<!--     </div>
- -->
-  </div>
+<div id="socialLinks" style="text-align:center">
+   <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}" class="socialLink"><i class="fa fa-twitter fa-2x"></i></a>
+   <a target="_blank" href="https://linkedin.com/in/adamweitzman" class="socialLink"><i class="fa fa-linkedin fa-2x"></i></a>
+   <a target="_blank" href="https://github.com/{{ site.github_username }}" class="socialLink"><i class="fa fa-github fa-2x"></i></a>
+</div>
 
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="/main.js"></script>

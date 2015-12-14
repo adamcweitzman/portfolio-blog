@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header class="hero content">
-	<h1>Projects</h1>
+	<h1 class="header">Projects</h1>
 </header>
 <ul class="post-list">
 {% assign sorted_projects = (site.posts | sort: 'title') %}
@@ -11,7 +11,7 @@ layout: default
   <li>
     {% if post.project %}
     <h2>
-      <a class="post-link" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+      <a id="title" class="post-link" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
     </h2>
     <h4>{{ post.tech }}</h4>
     <p>{{ post.description }}</p>
