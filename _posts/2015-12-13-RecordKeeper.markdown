@@ -1,5 +1,6 @@
 ---
 layout: post
+position: 3
 title:  "RecordKeeper"
 date:   2015-12-12 16:35:34 -0600
 categories: jekyll update
