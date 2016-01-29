@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Crafted with &hearts; in the ATX
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: adam_weitzman
+twitter_username: hackturalist
 github_username:  adamcweitzman
 linkedin_username: adamweitzman
 
