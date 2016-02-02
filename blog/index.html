@@ -6,7 +6,8 @@ layout: default
 </header>	
 
 <ul class="post-list">
-{% for post in site.posts %}
+{% assign sorted_blog = (site.posts | sort: 'position') %}
+{% for post in sorted_blog %}
  	{% if post.blog %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>

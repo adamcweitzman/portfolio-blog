@@ -4,6 +4,7 @@ title:  "Taming the Data Beast"
 date:   2015-12-17 16:35:34 -0600
 categories: jekyll update
 blog: true
+position: 3
 description: I was recently asked to parse a large amount of data into a MongoDB Database. And By large I mean 5GB, which is about 4950MB too large to open without crashing excel...
 ---
 

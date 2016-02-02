@@ -4,6 +4,7 @@ title:  "Get Max Numbers"
 date:   2015-12-08 16:35:34 -0600
 categories: jekyll update
 blog: true
+position: 4
 description: Just stumbled across this in my site. Needed to sort pages starting with the maximum number in an array... 
 ---
 Just stumbled across this in my site. Needed to sort pages starting with the maximum number in an array:

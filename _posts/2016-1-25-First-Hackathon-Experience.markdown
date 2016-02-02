@@ -4,6 +4,7 @@ title:  "Seven Haiku About First Hackathon Experience"
 date:   2015-1-25 16:35:34 -0600
 categories: jekyll update
 blog: true
+position: 2
 description: Lowes Digital Challenge 2016, a story told through the lense of Haiku!
 ---
 

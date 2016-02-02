@@ -4,6 +4,7 @@ title:  "Javascript Closures: A Rambling"
 date:   2015-02-01 16:35:34 -0600
 categories: jekyll update
 blog: true
+position: 1
 description: I get on my high horse and try and explain Javascript Closures, a vexing topic and a frequent question of interviewers.
 ---
 In all my interviews for front-end programming work I've been asked to define a Javascript Closure...it's an easy question to ask but a difficult one to answer. And I've given all kinds of muddled responses that sound like lines from a Dr. Seuss Book. In response I've heard equally confusing answers from interviewers. So does anyone know what the true nature of a closure is?
