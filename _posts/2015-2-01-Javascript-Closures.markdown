@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Javascript Closures: A Rambling"
-date:   2015-12-17 16:35:34 -0600
+date:   2015-02-01 16:35:34 -0600
 categories: jekyll update
 blog: true
 description: I get on my high horse and try and explain Javascript Closures, a vexing topic and a frequent question of interviewers.
