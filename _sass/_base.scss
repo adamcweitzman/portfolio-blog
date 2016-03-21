@@ -155,8 +155,8 @@ pre {
 
 
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}) * 2);
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}) * 2);
+    max-width: 80%;
+    max-width: 80%;
     margin-right: auto;
     margin-left: auto;
 /*    padding-right: $spacing-unit;
@@ -218,10 +218,11 @@ div {
 
 img {
     display: block;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 20%;
+    max-height: 20%;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
 }
 
 .hero {
@@ -253,7 +254,7 @@ img {
 }
 
 #fullStack {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
