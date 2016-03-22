@@ -218,8 +218,8 @@ div {
 
 img {
     display: block;
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 30%;
+    max-height: 30%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -253,8 +253,17 @@ img {
    color: #9C66BA; 
 }
 
-#fullStack {
+#name {
     font-size: 30px;
+}
+
+#fullStack {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+#tagline {
+    padding-bottom: 30px;
 }
 
 
