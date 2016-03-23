@@ -5,7 +5,7 @@ layout: default
 	<h1 class="header">Blog</h1>
 </header>	
 
-<ul class="post-list">
+<ul class="post-list blog-style">
 {% assign sorted_blog = (site.posts | sort: 'position') %}
 {% for post in sorted_blog %}
  	{% if post.blog %}
