@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Taming the Data Beast</title>
+  <meta name="description" content="I was recently asked to parse a large amount of data into a MongoDB Database. And By large I mean 5GB, which is about 4950MB too large to open without crashi...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/jekyll/update/2015/12/17/Taming-The-Data-Beast.html">
+  <link rel="alternate" type="application/rss+xml" title="Adam Weitzman" href="http://yourdomain.com/feed.xml">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="href='https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+
+
+  <a class="site-title" href="/">AW</a>
+
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+
+
+  <div class="menu">
+    <ul>
+      <a href="/about/index.html"><li>ABOUT</li></a>
+      <a href="/projects/index.html"><li>PROJECTS</li></a>
+      <a href="/blog/index.html"><li>BLOG</li></a>
+      <a href="/adam-weitzman-resume-2016-v4.pdf"><li>RESUME</li></a>
+    </ul>
+  </div> 
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header text-center header">
+	    <h1 class="post-title" itemprop="name headline">Taming the Data Beast</h1>
+	    <p class="post-meta"><time datetime="2015-12-17T16:35:34-06:00" itemprop="datePublished">Dec 17, 2015</time></p>
+	    <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="adam_weitzman">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I was recently asked to parse a large amount of data into a MongoDB Database. And By large I mean 5GB, which is about 4950MB too large to open without crashing excel. So whoa, quite a challenge, how do I get this humongous CSV file (comma, seperated, values) into Mongo? first step: I wanted to get familiar with the dataset. Here’s a really helpful command:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">split</span> <span class="o">-</span><span class="nx">l</span> <span class="mi">200</span> <span class="nx">example</span><span class="p">.</span><span class="nx">csv</span></code></pre></figure>
+
+<p>Where example.csv is the file to be split and 200 is the number of lines that one file will contain. Here’s another:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">wc</span> <span class="o">-</span><span class="nx">l</span> <span class="nx">example</span><span class="p">.</span><span class="nx">csv</span></code></pre></figure>
+
+<p>This command counts the number of lines per file. For example, my 5GB file contained almost 5,000,000 lines when I ran wc -l on it!</p>
+
+<p>Using the split command, I split the giant file, which I named “bigfile.csv” out of fear and admiration of its bigness.</p>
+
+<p>After running:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">split</span> <span class="o">-</span><span class="nx">l</span> <span class="mi">47000</span> <span class="nx">example</span><span class="p">.</span><span class="nx">csv</span></code></pre></figure>
+
+<p>I got 100 files that I could open in excel to check the data out. One at a time of course. Each file was approximately 48MB, don’t exactly know how that math checks out…but…I opened the file to check for coulumns I wanted to chop, and guess what? There’s a command line algorithm:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">cut</span> <span class="o">-</span><span class="nx">d</span> <span class="p">,</span> <span class="o">-</span><span class="nx">f</span> <span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span> <span class="nx">example</span><span class="p">.</span><span class="nx">csv</span> <span class="o">&gt;</span> <span class="nx">cutcolumns</span><span class="p">.</span><span class="nx">csv</span></code></pre></figure>
+
+<p>Where -d tells the cut command that the lines are seperated by commas hence (CSV - comma, seperated, values)</p>
+
+<p>In my file of medical data I wanted only the addresses and credentials of healthcare providers returned with the goal of getting the location of registered US MD’s.</p>
+
+<p>I applied the command on the “bigfile.csv” and saved every address to a seperate file on the other side of the carrot so I had one long list of addresses and credentials.</p>
+
+<p>Still to big to open in excel, so I ran:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">ls</span> <span class="o">-</span><span class="nx">lh</span></code></pre></figure>
+
+<p>which gave me the size of the file, which was about 200MB…so I ran split again to chop that into 4 smaller files.</p>
+
+<p>To end this story: After installing a node package called “csvtojson” I ran it through each of my files with:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">csvtojson</span> <span class="p">[</span><span class="nx">parse</span><span class="p">]</span>  <span class="o">~</span><span class="sr">/desktop/m</span><span class="nx">edical_data_headers</span><span class="o">/</span><span class="nx">location_files</span><span class="o">/</span><span class="nx">xad_reformated</span><span class="p">.</span><span class="nx">csv</span> <span class="o">&gt;</span> <span class="nx">converted</span><span class="p">.</span><span class="nx">json</span></code></pre></figure>
+
+<p>I ran that on all four files and then….last chapter here, ran mongoimport on all 4 converted json files like so:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">mongoimport</span> <span class="o">-</span><span class="nx">h</span> <span class="nx">ds033145</span><span class="p">.</span><span class="nx">mongolab</span><span class="p">.</span><span class="nx">com</span><span class="err">:</span><span class="mi">33145</span> <span class="o">-</span><span class="nx">d</span> <span class="nx">medical_data</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">medical_data</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">medical_data</span> <span class="o">-</span><span class="nx">p</span> <span class="nx">medical_data</span> <span class="o">--</span><span class="nx">file</span> <span class="nx">converted2</span><span class="p">.</span><span class="nx">json</span> <span class="o">--</span><span class="nx">jsonArray</span></code></pre></figure>
+
+<p>And now I have my beautiful JSON data in MongoDB ready to use and abuse. No backend server code in python or js minus the converter package. Power from the bash shell!</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <p class="text-center">Crafted with &hearts; in the ATX
+</p>
+
+<div id="socialLinks" style="text-align:center">
+   <a target="_blank" href="https://twitter.com/hackturalist" class="socialLink"><i class="fa fa-twitter fa-2x"></i></a>
+   <a target="_blank" href="https://linkedin.com/in/adamweitzman" class="socialLink"><i class="fa fa-linkedin fa-2x"></i></a>
+   <a target="_blank" href="https://github.com/adamcweitzman" class="socialLink"><i class="fa fa-github fa-2x"></i></a>
+</div>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/main.js"></script>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adam Weitzman</title>
+    <description>Crafted with &amp;hearts; in the ATX
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Mar 2016 17:03:02 -0500</pubDate>
+    <lastBuildDate>Thu, 24 Mar 2016 17:03:02 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>How To Get Your First Dev Job</title>
+        <description>&lt;p&gt;Two years ago to the day my room was a makeshift closet nested at the back of an old trailer with four other people in a not so parcticularly beautfiul part of California. I was a science teacher. And I loved my job, and I was completely broke.&lt;/p&gt;
+
+&lt;p&gt;Another coworker was a farmer in Israel.&lt;/p&gt;
+
+&lt;p&gt;And a friend of mine was an online art school dropout in college.&lt;/p&gt;
+
+&lt;p&gt;Now, all three of us are write and explain code for a living. I love my job, I love going into work, putting my headphones on and cracking into tough problems. Everyday I learn something new, and everyday my value increases exponentially…it’s a great career.&lt;/p&gt;
+
+&lt;p&gt;Finding that first full-time job is hard. Especially in Austin where the majority of companies are startups without the resources to invest in a junior dev. You have to seperate yourself from the pack, and here’s how…&lt;/p&gt;
+
+&lt;p&gt;1) LINKEDIN AND TWITTER ARE MORE IMPORTANT THAN YOUR CODING SKILLS&lt;/p&gt;
+
+&lt;p&gt;      - Increasing your online presence increases your value. Period. Companies want to hire someone that’s an active part of the tech community. Tweeting regularly and gaining followers show this. Also, your linked in is the most crucial part of your portfolio. There are two types of people on LinkedIn, those who have 500+ connections and those who do not. Do it, connect with everyone. Your account will snowball and you’ll get the 500 quickly.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Mar 2016 17:35:34 -0500</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Taming the Data Beast</title>
+        <description>&lt;p&gt;I was recently asked to parse a large amount of data into a MongoDB Database. And By large I mean 5GB, which is about 4950MB too large to open without crashing excel. So whoa, quite a challenge, how do I get this humongous CSV file (comma, seperated, values) into Mongo? first step: I wanted to get familiar with the dataset. Here’s a really helpful command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Where example.csv is the file to be split and 200 is the number of lines that one file will contain. Here’s another:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This command counts the number of lines per file. For example, my 5GB file contained almost 5,000,000 lines when I ran wc -l on it!&lt;/p&gt;
+
+&lt;p&gt;Using the split command, I split the giant file, which I named “bigfile.csv” out of fear and admiration of its bigness.&lt;/p&gt;
+
+&lt;p&gt;After running:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;47000&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I got 100 files that I could open in excel to check the data out. One at a time of course. Each file was approximately 48MB, don’t exactly know how that math checks out…but…I opened the file to check for coulumns I wanted to chop, and guess what? There’s a command line algorithm:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cutcolumns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Where -d tells the cut command that the lines are seperated by commas hence (CSV - comma, seperated, values)&lt;/p&gt;
+
+&lt;p&gt;In my file of medical data I wanted only the addresses and credentials of healthcare providers returned with the goal of getting the location of registered US MD’s.&lt;/p&gt;
+
+&lt;p&gt;I applied the command on the “bigfile.csv” and saved every address to a seperate file on the other side of the carrot so I had one long list of addresses and credentials.&lt;/p&gt;
+
+&lt;p&gt;Still to big to open in excel, so I ran:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;which gave me the size of the file, which was about 200MB…so I ran split again to chop that into 4 smaller files.&lt;/p&gt;
+
+&lt;p&gt;To end this story: After installing a node package called “csvtojson” I ran it through each of my files with:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;csvtojson&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/desktop/m&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;edical_data_headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location_files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xad_reformated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I ran that on all four files and then….last chapter here, ran mongoimport on all 4 converted json files like so:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;mongoimport&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ds033145&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mongolab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33145&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;medical_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;medical_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;medical_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;medical_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;converted2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jsonArray&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And now I have my beautiful JSON data in MongoDB ready to use and abuse. No backend server code in python or js minus the converter package. Power from the bash shell!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>RecordKeeper</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/RecordKeeper.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/RecordKeeper.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Point Break Calculator</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/PointBreakCalculator.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/PointBreakCalculator.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>BarTinder</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/BarTinder.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/BarTinder.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Asteroid Defender (Firefox/Safari only)</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/AsteroidDefender.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/AsteroidDefender.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Doctor Location App</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/Doctor-Location-App.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Doctor-Location-App.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Get Max Numbers</title>
+        <description>&lt;p&gt;Just stumbled across this in my site. Needed to sort pages starting with the maximum number in an array:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;458&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;120&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;215&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;228&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;122205&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85411&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxInNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minInNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxInNumbers&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prints&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;122205&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minInNumbers&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prints&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85411&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pretty nifty!&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Javascript Closures: A Rambling</title>
+        <description>&lt;p&gt;In all my interviews for front-end programming work I’ve been asked to define a Javascript Closure…it’s an easy question to ask but a difficult one to answer. And I’ve given all kinds of muddled responses that sound like lines from a Dr. Seuss Book. In response I’ve heard equally confusing answers from interviewers. So does anyone know what the true nature of a closure is?&lt;/p&gt;
+
+&lt;p&gt;As Einstein says “If you can’t explain it simply, you don’t understand it well enough.”&lt;/p&gt;
+
+&lt;p&gt;So here is my attempt to explain something to myself…simply.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with a nested function:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatamI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here’s the question…which version of the variable whatAmI will JS return? If you plug it into a repl, you get:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Why? Because Javascript always finds the variable from the closest enclosing funtion. It’s a rule. So when we run closure() the local variable gets returned because the function inner() is being called in scope. Ok so here’s where things go to crazy town, take this code snippet for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatamI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerFunction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerfunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We only changed one thing. Now instead of returning the value of the inner function. We return a reference to the inner function, it hasn’t been called yet. Lets walk through what’s happening in lexical scope as if we were a browser.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I see the variable whatAmI is set as &quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/li&gt;
+&lt;li&gt;I&#39;m going to skip over the closure function, I don&#39;t read that yet. I see the variable innerFunction contains the value of the closure function. I&#39;m going to go find out what that is.&lt;/li&gt;
+&lt;li&gt;Ok cool, I can see that the value of the closure function is stored in innerFunction, what&#39;s the value of closure()? O i can see it&#39;s: 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;Ok now I&#39;m reading the result variable as the value of the executed inner function&lt;/li&gt;
+&lt;li&gt;Now I console.log(result)
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What! How can this be! If we called the function in the global scope, wouldn’t it be referencing the global variabe!?!? No it’s not, beceause there is another rule of javascript that seems to be unspoken, here it is: it’s the holy grail of closures!&lt;/p&gt;
+
+&lt;h1&gt;When a function is defined in javascript it comes with a referencing function environment&lt;/h1&gt;
+
+&lt;p&gt;So wherever that function is defined, it shares all the variables with the function it is defined in. So…ya?&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 Feb 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/02/01/Javascript-Closures.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/02/01/Javascript-Closures.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>GAJobsATX</title>
+        <description>
+</description>
+        <pubDate>Thu, 29 Jan 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/01/29/GAJobsATX.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/01/29/GAJobsATX.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
