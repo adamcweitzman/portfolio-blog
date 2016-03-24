@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<header class="hero content">
+	<h1 class="header">Projects</h1>
+</header>
+
 <ul class="post-list">
 {% assign sorted_projects = (site.posts | sort: 'position') %}
 {% for post in sorted_projects %}
