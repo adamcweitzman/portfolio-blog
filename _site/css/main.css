@@ -190,6 +190,9 @@ img {
 #tagline {
   padding-bottom: 30px; }
 
+#faceshot {
+  border-radius: 100%; }
+
 .hamburger {
   background: none;
   background-color: #9C66BA;

@@ -6,9 +6,9 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 May 2016 17:24:51 -0500</pubDate>
-    <lastBuildDate>Tue, 31 May 2016 17:24:51 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Mon, 08 Aug 2016 16:40:38 -0500</pubDate>
+    <lastBuildDate>Mon, 08 Aug 2016 16:40:38 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>How To Get A Programming Job</title>
@@ -208,6 +208,46 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
       </item>
     
       <item>
+        <title>Jackrabbit Mobile</title>
+        <description>
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/Jackrabbit.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Jackrabbit.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Tripchamp</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;layout: post
+position: 2
+title:  “GAJobsATX”
+date:   2015-1-29 16:35:34 -0600
+categories: jekyll update
+project: true
+tech: MEAN, Angular, Express, MongoDB, Node, Bootstrap
+description: Job posting app for current students and alumni of General Assembly, go ahead and post a few jobs. The app has full CRUD capabilities so you can always delete :)
+link: http://www.gajobsatx.com/
+—&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/12/Tripchamp.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Tripchamp.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
         <title>Doctor Location App</title>
         <description>
 </description>
@@ -237,101 +277,6 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <pubDate>Tue, 08 Dec 2015 16:35:34 -0600</pubDate>
         <link>http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</link>
         <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Javascript Closures: A Rambling</title>
-        <description>&lt;p&gt;In all my interviews for front-end programming work I’ve been asked to define a Javascript Closure…it’s an easy question to ask but a difficult one to answer. And I’ve given all kinds of muddled responses that sound like lines from a Dr. Seuss Book. In response I’ve heard equally confusing answers from interviewers. So does anyone know what the true nature of a closure is?&lt;/p&gt;
-
-&lt;p&gt;As Einstein says “If you can’t explain it simply, you don’t understand it well enough.”&lt;/p&gt;
-
-&lt;p&gt;So here is my attempt to explain something to myself…simply.&lt;/p&gt;
-
-&lt;p&gt;Let’s start with a nested function:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatamI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here’s the question…which version of the variable whatAmI will JS return? If you plug it into a repl, you get:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Why? Because Javascript always finds the variable from the closest enclosing funtion. It’s a rule. So when we run closure() the local variable gets returned because the function inner() is being called in scope. Ok so here’s where things go to crazy town, take this code snippet for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatamI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerFunction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;innerfunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We only changed one thing. Now instead of returning the value of the inner function. We return a reference to the inner function, it hasn’t been called yet. Lets walk through what’s happening in lexical scope as if we were a browser.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;I see the variable whatAmI is set as &quot;I&#39;m a GLOBAL VARIABLE, duh&quot;&lt;/li&gt;
-&lt;li&gt;I&#39;m going to skip over the closure function, I don&#39;t read that yet. I see the variable innerFunction contains the value of the closure function. I&#39;m going to go find out what that is.&lt;/li&gt;
-&lt;li&gt;Ok cool, I can see that the value of the closure function is stored in innerFunction, what&#39;s the value of closure()? O i can see it&#39;s: 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;whatAmI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;Ok now I&#39;m reading the result variable as the value of the executed inner function&lt;/li&gt;
-&lt;li&gt;Now I console.log(result)
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Obviously I&#39;m a LOCAL VARIABLE adam you stupid monkey&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;What! How can this be! If we called the function in the global scope, wouldn’t it be referencing the global variabe!?!? No it’s not, beceause there is another rule of javascript that seems to be unspoken, here it is: it’s the holy grail of closures!&lt;/p&gt;
-
-&lt;h1&gt;When a function is defined in javascript it comes with a referencing function environment&lt;/h1&gt;
-
-&lt;p&gt;So wherever that function is defined, it shares all the variables with the function it is defined in. So…ya?&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 01 Feb 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/02/01/Javascript-Closures.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/02/01/Javascript-Closures.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>GAJobsATX</title>
-        <description>
-</description>
-        <pubDate>Thu, 29 Jan 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/01/29/GAJobsATX.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/01/29/GAJobsATX.html</guid>
         
         
         <category>jekyll</category>

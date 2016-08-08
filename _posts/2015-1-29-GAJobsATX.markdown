@@ -1,6 +1,6 @@
 ---
 layout: post
-position: 1
+position: 2
 title:  "GAJobsATX"
 date:   2015-1-29 16:35:34 -0600
 categories: jekyll update
