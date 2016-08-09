@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Aug 2016 17:00:14 -0500</pubDate>
-    <lastBuildDate>Mon, 08 Aug 2016 17:00:14 -0500</lastBuildDate>
+    <pubDate>Tue, 09 Aug 2016 08:48:34 -0500</pubDate>
+    <lastBuildDate>Tue, 09 Aug 2016 08:48:34 -0500</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -224,17 +224,7 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
     
       <item>
         <title>Tripchamp</title>
-        <description>&lt;hr /&gt;
-&lt;p&gt;layout: post
-position: 2
-title:  “GAJobsATX”
-date:   2015-1-29 16:35:34 -0600
-categories: jekyll update
-project: true
-tech: MEAN, Angular, Express, MongoDB, Node, Bootstrap
-description: Job posting app for current students and alumni of General Assembly, go ahead and post a few jobs. The app has full CRUD capabilities so you can always delete :)
-link: http://www.gajobsatx.com/
-—&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
         <link>http://yourdomain.com/jekyll/update/2015/12/12/Tripchamp.html</link>
