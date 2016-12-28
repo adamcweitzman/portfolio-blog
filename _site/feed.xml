@@ -4,11 +4,11 @@
     <title>Adam Weitzman</title>
     <description>Crafted with &amp;hearts; in the ATX
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Sep 2016 20:53:31 -0500</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2016 20:53:31 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.0</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 28 Dec 2016 10:34:38 -0600</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 10:34:38 -0600</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>How To Get A Programming Job</title>
@@ -82,8 +82,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 22 Mar 2016 17:35:34 -0500</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</guid>
+        <link>http://localhost:4000/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2016/03/22/How-To-Get-Your-First-Dev-Job.html</guid>
         
         
         <category>jekyll</category>
@@ -137,8 +137,22 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
 &lt;p&gt;And now I have my beautiful JSON data in MongoDB ready to use and abuse. No backend server code in python or js minus the converter package. Power from the bash shell!&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/17/Taming-The-Data-Beast.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>iServiceDog</title>
+        <description></description>
+        <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/iServiceDog.mdown</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/iServiceDog.mdown</guid>
         
         
         <category>jekyll</category>
@@ -152,8 +166,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/RecordKeeper.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/RecordKeeper.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/RecordKeeper.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/RecordKeeper.html</guid>
         
         
         <category>jekyll</category>
@@ -167,8 +181,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/PointBreakCalculator.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/PointBreakCalculator.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/PointBreakCalculator.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/PointBreakCalculator.html</guid>
         
         
         <category>jekyll</category>
@@ -182,8 +196,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/BarTinder.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/BarTinder.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/BarTinder.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/BarTinder.html</guid>
         
         
         <category>jekyll</category>
@@ -197,8 +211,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/AsteroidDefender.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/AsteroidDefender.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/AsteroidDefender.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/AsteroidDefender.html</guid>
         
         
         <category>jekyll</category>
@@ -212,8 +226,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/Jackrabbit.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Jackrabbit.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/Jackrabbit.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/Jackrabbit.html</guid>
         
         
         <category>jekyll</category>
@@ -227,8 +241,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/Tripchamp.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Tripchamp.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/Tripchamp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/Tripchamp.html</guid>
         
         
         <category>jekyll</category>
@@ -242,31 +256,8 @@ Finding that first full-time job is hard. Especially in Austin where the majorit
         <description>
 </description>
         <pubDate>Sat, 12 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/12/Doctor-Location-App.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/12/Doctor-Location-App.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Get Max Numbers</title>
-        <description>&lt;p&gt;Just stumbled across this in my site. Needed to sort pages starting with the maximum number in an array:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;458&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;120&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;215&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;228&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;122205&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85411&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxInNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minInNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxInNumbers&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prints&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;122205&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minInNumbers&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prints&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85411&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pretty nifty!&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 08 Dec 2015 16:35:34 -0600</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/08/Get-Max-Numbers.html</guid>
+        <link>http://localhost:4000/jekyll/update/2015/12/12/Doctor-Location-App.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/12/12/Doctor-Location-App.html</guid>
         
         
         <category>jekyll</category>

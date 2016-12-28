@@ -1,0 +1,11 @@
+---
+layout: post
+position: 0
+title:  "iServiceDog"
+date:   2015-12-12 16:35:34 -0600
+categories: jekyll update
+project: true
+tech: WP, SEMRush, AWeber, Thrive, Yoast SEO, Long Tail Pro, Market Samurai
+description: First niche website for service dogs and their owners. Lot's of SEO keyword and domain research went into the making of this one. Hoping to grow site with SEO and content marketing to be the authority site in the niche. Check it out!
+link: http://iservicedog.com/
+---
