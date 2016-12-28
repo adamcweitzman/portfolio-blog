@@ -7,6 +7,26 @@ $(function() {
     	$(this).css({'background-color': '#9C66BA', 'color': 'white'});
     });
 
+
+    // $('.faceshot').hover(function() {
+    //     $(this).css({'display': 'none'});
+    //     $('.faceshotcoconut').css({'display': 'show'});
+    // });
+
+    // $('.faceshot').hover(function() {
+    //     $('.faceshotcoconut').css({'display': 'show'});
+    // });
+
+
+    // $('.faceshotcoconut').hover(function() {
+    //     $(this).css({'display': 'show'});
+    // });
+
+
+
+
+
+
     $("a[href=#menuExpand]").click(function(e) {
         $(".menu").toggleClass("menuOpen");
         e.preventDefault();

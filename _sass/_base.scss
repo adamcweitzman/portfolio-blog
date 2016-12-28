@@ -270,6 +270,11 @@ img {
   border-radius: 100%;
 }
 
+.faceshotcoconut {
+  border-radius: 100%;
+  display: none;
+}
+
 #resume-photo {
   height: 900px;
   width: 100%;
@@ -326,5 +331,9 @@ img {
 .site-title {
     padding-left: 20px;
 }
+
+/*#faceshot:hover {
+    background-image: url('/faceshotcoconut.jpg');
+}*/
 
 
